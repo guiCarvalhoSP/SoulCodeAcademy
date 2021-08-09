@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body oncopy="copiar()" onkeypress="keyspressed() ">
+    <header>
+        <p id="mainlogo">
+            <img id="logo" src="img/logo.png" alt="">
+        </p>
+    </header>
+
+    <main>
+        <img id="nightbutton" src="img/daymode-button.png" alt="botão-modo-noite" onclick="alteraCor()">
+        <div class="container">
+            <div class="chartitle">
+                <h1 oncopy="copiar()" class="aumentar">CONHEÇA ALGUNS DOS NOSSOS PERSONAGENS:</h1>
+            </div>
+            <div class="char1">
+                <img class="images" onmouseover="charout()" onmouseout="charin()"
+                    src="https://thumbs.gfycat.com/AcademicInformalHookersealion-size_restricted.gif" alt="">
+            </div>
+            <div class="char2">
+                <img class="images" onmouseover="char2out()" onmouseout="char2in()" src="https://i.gifer.com/Zgta.gif"
+                    alt="">
+            </div>
+            <div class="char3">
+                <img class="images" onmouseover="char3out()"
+                    src="https://i.pinimg.com/originals/75/89/66/7589664d94df61fcd992394417dfad1e.gif"
+                    onmouseout="char3in()" alt="">
+            </div>
+            <div class="namec1" onclick="charexpand()" oncopy="copiar()">
+                <h2 class="aumentar" onclick="charexpand()">ZOMBIE</h2>
+                <p class="expandp" onclick="charexpand()">Clique para mais informações...</p>
+            </div>
+            <div class="namec2" onclick="char2expand()" oncopy="copiar()">
+                <h2 class="aumentar" onclick="char2expand()">STEVE</h2>
+                <p class="expandp" onclick="char2expand()">Clique para mais informações...</p>
+            </div>
+            <div class="namec3" onclick="char3expand()" oncopy="copiar()">
+                <h2 class="aumentar" onclick="char3expand()">CREEPER</h2>
+                <p class="expandp" onclick="char3expand()">Clique para mais informações...</p>
+            </div>
+        </div>
+        <div class="form1">
+            <h1 class="aumentar">CADASTRE-SE AQUI!</h1>
+            <form action="" method="POST" id="formulario" name="formulario" onreset="formreset()">
+                <legend class="aumentar">Cadastro de Usuário</legend>
+                <label class="aumentar" for="nome">Nome:</label><br>
+                <input type="text" id="nome" name="nome" onselect="select()"><br><br>
+                <label class="aumentar" for="user_name">Nick Name:</label><br>
+                <input type="text" id="nick" name="user_name"><br><br>
+                <label class="aumentar" for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email"><br><br>
+                <label class="aumentar" for="idade">Idade:</label><br>
+                <input type="text" id="idade" name="idade"><br><br>
+                <label class="aumentar" for="senha">Senha:</label><br>
+                <input type="password" id="senha" name="senha" onpaste="colou()"><br><br>
+                <button type="button" class="botao" onclick="validacao()">Cadastrar</button>
+                <input type="reset" id="botaoreset">
+                <p>Teclas Pressionadas</p>
+                <p id="count"></p>
+            </form>
+
+            <form class="form2">
+                <button  type="button" onclick="Aumentar(this)" value="Aumentar" >Aumentar</button>
+            </form>
+            <form class="form2">
+                <button type="button" onclick="Diminuir(this)" value="Diminuir" >Diminuir</button>
+            </form>
+        </div>
+    </main>
+
+    <footer onselect="select()" class="aumentar">
+        2021 &copy; Carlos Junior – Elis Marcela – Guilherme Carvalho – Mariane Freitas
+    </footer>
+</body>
+
+</html>

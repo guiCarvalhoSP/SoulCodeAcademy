@@ -1,0 +1,23 @@
+body{
+    background-color: rgb(230, 211, 106);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+
+}
+
+.botao{
+    border-style: none;
+    background-color: rgb(148, 224, 224);
+    height: 3em;
+    border-radius: 3vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    left: 45%;
+
+}
+
+.botao:hover{
+    border-style: none;
+    background-color: rgb(92, 179, 179);
+    box-shadow: 2px 2px 2px
+}

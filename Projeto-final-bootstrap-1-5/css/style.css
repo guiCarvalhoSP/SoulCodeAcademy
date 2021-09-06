@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+body {
+    background-color: rgb(245, 245, 245);
+    font-family: 'Open Sans';
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Roboto';
+}
+/* Definindo tamanho padrão do carrousel */
+.carousel-item img{
+    height: 50vh;
+    margin-bottom: 30px;
+}
+
+/* Modificando tamanho dos cards e estilizando */
+.card {
+    box-shadow: rgb(75, 75, 75) 0px 0px 10px ;
+}
+.card:hover{
+    box-shadow: #E547F5  0px 0px 10px ;
+}
+
+.card-deck{
+    margin-bottom: 30px;
+}
+

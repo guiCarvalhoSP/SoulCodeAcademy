@@ -1,0 +1,5 @@
+#2543A8 - azul escuro
+#6254F5 - Azul claro
+#F5E61D - Amarelo
+#AD2184 - Rosa escuro
+#E547F5 - Rosa Claro

@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Jquery : utilizar um scroll que a partir de  400px do topo do body apareça uma seta ao lado direito da pagina que funciona como retorno suave para o inicio da pagina , aplicar essa função na pagina inicial do projeto. JavaScript: validações. Css: Estilizar o rodapé usando exclusivamente css. HTML: Utilizar <aside> e <article> -->
+
+<head>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="bootstrap-4.6.0-dist/css/bootstrap.min.css">
+   <link href="open-iconic-master/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/header-footer.css">
+
+   <!-- Icone no topo do navegador -->
+   <link rel="icon" type="imagem/png" href="imagens/favicon.ico" />
+
+
+   <title>Projeto</title>
+</head>
+
+<body>
+   <!-- Cabeçalho -->
+   <header>
+      <nav class="navbar navbar-expand-lg">
+         <a class="navbar-brand mr-5" href="index.html"><img src="imagens/logomarca.png" alt="logo"></a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+            aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+            <form class="form-inline my-2 my-lg-0 navbar-collapse">
+               <input class="form-control mr-sm-2" type="search" id="busca" placeholder="Pesquise aqui"
+                  aria-label="Pesquisar">
+               <button class="btn btn-outline-primary my-2 my-sm-0" type="button"><span class="oi oi-magnifying-glass"
+                     style="font-size: 18px;"></span></button>
+            </form>
+
+            <ul class="navbar-nav mr-auto">
+               <li class="nav-item active mr-lg-3">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(página atual)</span></a>
+               </li>
+               <li class="nav-item dropdown mr-lg-3">
+                  <a class="nav-link dropdown-toggle" href="produtos.html" id="navbarDropdown" role="button"
+                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     Produtos
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                     <a class="dropdown-item" href="produtos.html">Visualizar tudo</a>
+                     <a class="dropdown-item" href="#">Kits</a>
+                     <a class="dropdown-item" href="#">Máscaras capilares</a>
+                     <a class="dropdown-item" href="#">Shampoo & condicionadores</a>
+                     <a class="dropdown-item" href="#">Perfumes</a>
+                     <a class="dropdown-item" href="#">Outros</a>
+                  </div>
+               </li>
+               <li class="nav-item mr-lg-3">
+                  <a class="nav-link" href="quemsomos.html">Quem somos</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="cadastro.html">Cadastro</a>
+               </li>
+
+            </ul>
+
+         </div>
+      </nav>
+
+   </header>
+
+   <!-- Conteúdo principal -->
+   <main>
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="5000">
+         <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+         </ol>
+         <div class="carousel-inner">
+            <div class="carousel-item active">
+               <img class="d-block w-100" src="imagens/banner-exemplo-1.png" alt="Primeiro Slide">
+               <div class="carousel-caption d-md-block">
+                  <h3>Os melheres produtos para cabelo</h3>
+                  <p>Temos tudo para todo tipo de cabelo, venha conhecer</p>
+                  <a href="produtos.html" class="btn btn-lg btn-success"> Clique aqui!</a>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <img class="d-block w-100" src="imagens/banner-exemplo-2.png" alt="Segundo Slide">
+               <div class="carousel-caption d-md-block">
+                  <h3>Descontos e promoções exclusivas</h3>
+                  <p>Faça seu cadastro para receber receber descontos e exclusivos e ficar por dentro dos novos lançamentos</p>
+                  <a href="cadastro.html" class="btn btn-lg btn-success"> Clique aqui!</a>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <img class="d-block w-100" src="imagens/banner-exemplo-3.png" alt="Terceiro Slide">
+            </div>
+         </div>
+         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+         </a>
+         <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+         </a>
+      </div>
+
+      <article class="container">
+         <h1>Mais vendidos:</h1>
+         <div class="card-deck rounded">
+            <div class="card">
+               <img class="card-img-top rounded"
+                  src="https://cdn.awsli.com.br/800x800/240/240026/produto/12870473/d739a8a78f.jpg"
+                  alt="Card image cap">
+               <div class="card-body">
+                  <h5 class="card-title">Produto 1</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero, dignissimos!</p>
+               </div>
+               <div class="card-footer d-md-flex">
+                  <div class="mr-auto">
+                     <h4>R$00,00</h4>
+                  </div>
+                  <button class="btn btn-outline-primary ">Comprar</button>
+               </div>
+            </div>
+            <div class="card">
+               <img class="card-img-top"
+                  src="https://cdn.awsli.com.br/800x800/240/240026/produto/12870473/d739a8a78f.jpg"
+                  alt="Card image cap">
+               <div class="card-body">
+                  <h5 class="card-title">Produto 2</h5>
+                  <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, ea.</p>
+               </div>
+               <div class="card-footer d-md-flex">
+                  <div class="mr-auto">
+                     <h4>R$00,00</h4>
+                  </div>
+                  <button class="btn btn-outline-primary ">Comprar</button>
+               </div>
+            </div>
+            <div class="card">
+               <img class="card-img-top"
+                  src="https://cdn.awsli.com.br/800x800/240/240026/produto/12870473/d739a8a78f.jpg"
+                  alt="Card image cap">
+               <div class="card-body">
+                  <h5 class="card-title">Produto 3</h5>
+                  <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto, magnam.</p>
+               </div>
+               <div class="card-footer d-md-flex">
+                  <div class="mr-auto">
+                     <h4>R$00,00</h4>
+                  </div>
+                  <button class="btn btn-outline-primary ">Comprar</button>
+               </div>
+            </div>
+         </div>
+
+         <h1>Promoções imperdíveis:</h1>
+         <div class="card-deck rounded">
+            <div class="card">
+               <img class="card-img-top rounded"
+                  src="https://cdn.awsli.com.br/800x800/240/240026/produto/12870473/d739a8a78f.jpg"
+                  alt="Card image cap">
+               <div class="card-body">
+                  <h5 class="card-title">Promoção 1</h5>
+                  <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, suscipit.</p>
+               </div>
+               <div class="card-footer d-md-flex">
+                  <div class="mr-auto">
+                     <h4>R$00,00</h4>
+                  </div>
+                  <button class="btn btn-sm btn-outline-primary ">Comprar</button>
+               </div>
+            </div>
+            <div class="card">
+               <img class="card-img-top"
+                  src="https://cdn.awsli.com.br/800x800/240/240026/produto/12870473/d739a8a78f.jpg"
+                  alt="Card image cap">
+               <div class="card-body">
+                  <h5 class="card-title">Promoção 2</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, perspiciatis!</p>
+               </div>
+               <div class="card-footer d-md-flex">
+                  <div class="mr-auto">
+                     <h4>R$00,00</h4>
+                  </div>
+                  <button class="btn btn-sm btn-outline-primary ">Comprar</button>
+               </div>
+            </div>
+            <div class="card">
+               <img class="card-img-top"
+                  src="https://cdn.awsli.com.br/800x800/240/240026/produto/12870473/d739a8a78f.jpg"
+                  alt="Card image cap">
+               <div class="card-body">
+                  <h5 class="card-title">Promoção 3</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, vitae?</p>
+               </div>
+               <div class="card-footer d-md-flex">
+                  <div class="mr-auto">
+                     <h4>R$00,00</h4>
+                  </div>
+                  <button class="btn btn-sm btn-outline-primary ">Comprar</button>
+               </div>
+            </div>
+            <div class="card">
+               <img class="card-img-top"
+                  src="https://cdn.awsli.com.br/800x800/240/240026/produto/12870473/d739a8a78f.jpg"
+                  alt="Card image cap">
+               <div class="card-body">
+                  <h5 class="card-title">Promoção 4</h5>
+                  <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, culpa.</p>
+               </div>
+               <div class="card-footer d-md-flex">
+                  <div class="mr-auto">
+                     <h4>R$00,00</h4>
+                  </div>
+                  <button class="btn btn-sm btn-outline-primary ">Comprar</button>
+               </div>
+            </div>
+         </div>
+
+         <!-- Asides -->
+         <aside>
+            <div class="card-deck rounded">
+               <div class="card">
+                  <img class="rounded" src="imagens/imagem-exemplo.png"  height="300px" alt="Card image cap">
+               </div>
+               <div class="card">
+                  <img class="rounded" src="imagens/imagem-exemplo2.png" height="300px" alt="Card image cap">
+               </div>
+            </div>
+         </aside>
+
+
+
+
+      </article>
+   </main>
+
+   <!-- Rodapé usando apenas css sem bootstrap -->
+   <footer class="rodape">
+      <div id="logo">
+         <img src="imagens/logomarca.png" alt="">
+      </div>
+
+      <div id="sociais">
+         <h4 id="redestext">Nossas redes sociais:</h4>
+         <a href="#"><img class="icones-sociais" src="imagens/facebook-icon.png" alt="faceboook"></a>
+         <a href="#"><img class="icones-sociais" src="imagens/instagram_projeto.png" alt="instagram"></a>
+         <a href="#"><img class="icones-sociais" src="imagens/twitter_projeto.png" alt="twitter"></a>
+         <a href="#"><img class="icones-sociais" src="imagens/whatsapp_projeto.png" alt="whatsapp"></a>
+      </div>
+
+      <div id="servicos">
+         <ul style="list-style-type: none;">
+            <li><a href="#">
+                  <h5>Serviços</h5>
+               </a></li>
+            <li><a href="#">
+                  <h5>Dúvidas frequentes</h5>
+               </a></li>
+            <li><a href="#">
+                  <h5>Central de ajuda</h5>
+               </a></li>
+            <li><a href="#">
+                  <h5>Termos de uso</h5>
+               </a></li>
+         </ul>
+      </div>
+
+      <div id="trabalhe">
+         <ul style="list-style-type: none;">
+            <li><a href="#">
+                  <h5>Trabalhe conosco</h5>
+               </a></li>
+            <li><a href="#">
+                  <h5>Entre em contato</h5>
+               </a></li>
+            <li><a href="#">
+                  <h5>Privacidade</h5>
+               </a></li>
+            <li><a href="#">
+                  <h5>Avisos legais</h5>
+               </a></li>
+         </ul>
+      </div>
+
+      <div id="copyright">
+         <p> Todos os direitos reservados ©Copyright 2020-2021 Beautyfly Cosméticos LTDA.</p>
+      </div>
+
+   </footer>
+
+   <!-- Botão voltar ao topo -->
+   <div><button id="voltarTopo" class="btn btn-dark" onClick="voltarTopo()"><span
+            class="oi oi-chevron-top"></span></button></div>
+
+   <!-- Botão libras -->
+   <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+         <div class="vw-plugin-top-wrapper"></div>
+      </div>
+   </div>
+   <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+   <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+   </script>
+
+   <!-- Links do javascript -->
+   <script src="libs/jquery.js"></script>
+   <script src="bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js"></script>
+   <script src="bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+   <script src="JS/script.js"></script>
+</body>
+
+</html>

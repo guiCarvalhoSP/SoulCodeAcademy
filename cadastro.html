@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap-4.6.0-dist/css/bootstrap.min.css">
+    <link href="open-iconic-master/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="css/header-footer.css">
+
+    <!-- Icone no topo do navegador -->
+    <link rel="icon" type="imagem/png" href="imagens/favicon.ico" />
+
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand mr-5" href="index.html"><img src="imagens/logomarca.png" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+                aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+                <form class="form-inline my-2 my-lg-0 navbar-collapse">
+                    <input class="form-control mr-sm-2" type="search" id="busca" placeholder="Pesquise aqui"
+                        aria-label="Pesquisar">
+                    <button class="btn btn-outline-primary my-2 my-sm-0" type="button"><span
+                            class="oi oi-magnifying-glass" style="font-size: 18px;"></span></button>
+                </form>
+
+
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item mr-lg-3">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown mr-lg-3">
+                        <a class="nav-link dropdown-toggle" href="produtos.html" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Produtos
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="produtos.html">Visualizar tudo</a>
+                            <a class="dropdown-item" href="#">Kits</a>
+                            <a class="dropdown-item" href="#">Máscaras capilares</a>
+                            <a class="dropdown-item" href="#">Shampoo & condicionadores</a>
+                            <a class="dropdown-item" href="#">Perfumes</a>
+                            <a class="dropdown-item" href="#">Outros</a>
+                        </div>
+                    </li>
+                    <li class="nav-item mr-lg-3">
+                        <a class="nav-link" href="quemsomos.html">Quem somos</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="cadastro.html">Cadastro <span class="sr-only">(página
+                                atual)</span></a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <div class="alert alert-danger" id="alertaFalha" display="none">
+            <p><Strong>Informações incorretas! </Strong> Verifique os campos em vermelho.</p>
+        </div>
+        <div class="alert alert-success" id="alertaCadastro" display="none">
+            <p><Strong>Cadastro realizado com sucesso.</Strong> Aproveite os benefícios. </p>
+        </div>
+
+        <div class="container mt-4 mb-4 rounded" id="box">
+            <div class="row">
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h1 class="mt-3">Cadastre-se</h1>
+                    <form method="POST">
+                        <div class="form-row">
+                            <div class="form-group col-md-7">
+                                <label for="nome">Nome completo</label>
+                                <input class="form-control" onblur="validaNome(value)" type="text" id=nome name="nome"
+                                    placeholder="Digite seu nome" required>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="idade">Data de nascimento</label>
+                                <input class="form-control" onblur="validaIdade(this)" type="date" id="idade"
+                                    name="idade" required>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="cpf">CPF</label>
+                                <input class="form-control" onblur="validaCpf(value)" type="number" id="cpf" name="cpf"
+                                    placeholder="Digite seu CPF sem pontos ou traços" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="email">Email</label>
+                                <input class="form-control" onblur="validaEmail(this)" type="email" id="email"
+                                    name="email" placeholder="Digite seu email" required>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="senha">Senha</label>
+                                <input class="form-control" onblur="validaSenha(value)" type="password" id="senha"
+                                    name="senha" placeholder="Crie uma senha." required>
+                                <small id="emailHelp" class="form-text text-muted">No mínimo 6 dígitos.</small>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="confirma">Confirme sua senha</label>
+                                <input class="form-control" onblur="confirmaSenha(value)" type="password" id="confirma"
+                                    name="confirma" placeholder="Digite novamente a senha." required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="endereco">Endereço</label>
+                                <input class="form-control" onblur="validaEndereco(value)" type="text" id="endereco"
+                                    name="endereco" placeholder="Digite seu endereço" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="complemento">Complemento</label>
+                                <input class="form-control" type="text" id="complemento" name="complemento"
+                                    placeholder="Apartamento, bloco, andar, etc.">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <label for="cep">CEP</label>
+                                <input class="form-control" onblur="validarCep(value)" type="number" id="cep" name="cep"
+                                    placeholder="Digite seu CEP sem pontos ou traços" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-check ml-2">
+                                <input class="form-check-input" type="checkbox" id="spam" value="opcao1" checked>
+                                <label class="form-check-label" for="spam">
+                                    <p><small>Aceito receber informações e promoções no e-mail.</small></p>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-check ml-2">
+                                <input class="form-check-input" type="checkbox" id="termos" value="opcao2" required>
+                                <label class="form-check-label" for="termos">
+                                    <p>Aceitar termos e condições.</p>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button class="btn btn-primary btn-lg ml-auto mr-auto mb-3" type="button"
+                                onclick="validaPost()">Cadastrar</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Rodapé usando apenas css sem bootstrap -->
+    <footer class="rodape">
+        <div id="logo">
+            <img src="imagens/logomarca.png" alt="">
+        </div>
+
+        <div id="sociais">
+            <h4 id="redestext">Nossas redes sociais:</h4>
+            <a href="#"><img class="icones-sociais" src="imagens/facebook-icon.png" alt="faceboook"></a>
+            <a href="#"><img class="icones-sociais" src="imagens/instagram_projeto.png" alt="instagram"></a>
+            <a href="#"><img class="icones-sociais" src="imagens/twitter_projeto.png" alt="twitter"></a>
+            <a href="#"><img class="icones-sociais" src="imagens/whatsapp_projeto.png" alt="whatsapp"></a>
+        </div>
+
+        <div id="servicos">
+            <ul style="list-style-type: none;">
+                <li><a href="#">
+                        <h5>Serviços</h5>
+                    </a></li>
+                <li><a href="#">
+                        <h5>Dúvidas frequentes</h5>
+                    </a></li>
+                <li><a href="#">
+                        <h5>Central de ajuda</h5>
+                    </a></li>
+                <li><a href="#">
+                        <h5>Termos de uso</h5>
+                    </a></li>
+            </ul>
+        </div>
+
+        <div id="trabalhe">
+            <ul style="list-style-type: none;">
+                <li><a href="#">
+                        <h5>Trabalhe conosco</h5>
+                    </a></li>
+                <li><a href="#">
+                        <h5>Entre em contato</h5>
+                    </a></li>
+                <li><a href="#">
+                        <h5>Privacidade</h5>
+                    </a></li>
+                <li><a href="#">
+                        <h5>Avisos legais</h5>
+                    </a></li>
+            </ul>
+        </div>
+
+        <div id="copyright">
+            <p> Todos os direitos reservados ©Copyright 2020-2021 Beautyfly Cosméticos LTDA.</p>
+        </div>
+
+    </footer>
+
+    <!-- Botão voltar ao topo -->
+    <div><button id="voltarTopo" class="btn btn-dark" onClick="voltarTopo()"><span
+                class="oi oi-chevron-top"></span></button></div>
+
+    <!-- Botão libras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <!-- Links do javascript -->
+    <script src="libs/jquery.js"></script>
+    <script src="bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+    <script src="JS/script.js"></script>
+    <script src="JS/cadastro.js"></script>
+</body>
+
+</html>

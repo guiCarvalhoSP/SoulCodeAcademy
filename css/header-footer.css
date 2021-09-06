@@ -1,0 +1,261 @@
+/* Importando fontes para o css */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+/* Padronização de fontes */
+
+body {
+    font-family: 'Open Sans';
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto';
+}
+
+/* CRIAÇÃO DA NAVBAR E MODIFICAÇÕES */
+
+.navbar {
+    background-color: #F5E61D;
+    font-size: larger;
+    font-family: 'Roboto';
+}
+
+.navbar-brand img {
+    height: 14vh;
+    background-color: rgb(233, 233, 233);
+    border: 3px rgb(70, 64, 12);
+    border-style: double;
+    border-radius: 10px;
+}
+
+.nav-link {
+    color: #2543A8;
+    font-size: larger;
+    font-family: 'Roboto';
+}
+
+.nav-link:hover {
+    color: #6254F5;
+}
+
+#busca {
+    width: 25vw;
+}
+
+/* Para permitir o dropdown menu, mesmo link do bootstrap, mas sem precisar usar a classe .navbar-light e acabar alterando tudo */
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+}
+
+.navbar-toggler {
+    color: rgba(0, 0, 0, .5);
+    border-color: rgba(0, 0, 0, .1);
+}
+
+/* CRIAÇÃO DO FOOTER */
+
+footer {
+    width: 100%;
+    background-color: #2543A8;
+    color: rgb(224, 224, 224);
+}
+
+#logo img {
+    margin: 0.5vw;
+    margin-left: 1vw;
+    width: 18vw;
+}
+
+/* Definindo nome das grids  */
+
+#logo {
+    grid-area: logo;
+}
+
+#sociais {
+    grid-area: sociais;
+}
+
+#servicos {
+    grid-area: servicos;
+}
+
+#trabalhe {
+    grid-area: trabalhe;
+}
+
+#copyright {
+    grid-area: copyright;
+}
+
+/* Definição dos grids do rodapé */
+
+.rodape {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 0.5fr;
+    grid-template-areas: "logo logo  sociais sociais sociais sociais" "logo logo servicos servicos trabalhe trabalhe" "logo logo servicos servicos trabalhe trabalhe" "logo logo servicos servicos trabalhe trabalhe" "copyright copyright copyright copyright copyright copyright";
+}
+
+/* Icones das redes sociais */
+
+.icones-sociais {
+    width: 3vw;
+    margin-right: 2vw;
+}
+
+.icones-sociais:hover {
+    width: 3vw;
+    margin-right: 2vw;
+    box-shadow: #eeeeee 0px 0px 3px;
+}
+
+#sociais :first-child {
+    margin-left: 5vw;
+}
+
+#sociais {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilização do copyright */
+
+#copyright {
+    font-size: large;
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilização das abas de servicos e trabalhe conosco e afins */
+
+#trabalhe {
+    display: flex;
+    justify-content: center;
+}
+
+#servicos {
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    display: flex;
+    justify-content: center;
+}
+
+#servicos ul, #trabalhe ul {
+    list-style: none;
+}
+
+#servicos ul li, #trabalhe ul li {
+    margin-top: 3vh;
+}
+
+#servicos ul li a, #trabalhe ul li a {
+    color: beige;
+}
+
+/* Botão voltar ao topo da página */
+
+#voltarTopo {
+    border-radius: 40%;
+    display: none;
+    position: fixed;
+    right: 2%;
+    bottom: 10%;
+}
+
+#voltarTopo span {
+    font-size: 2vw;
+}
+
+@media only screen and (max-width:479px) {
+    #logo img {
+        margin: 1vw 0 0 0;
+        width: 28vw;
+    }
+    /* Definição dos grids do rodapé */
+    .rodape {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 0.5fr;
+        grid-template-areas: 
+        "logo logo  sociais sociais sociais sociais"
+        "servicos servicos servicos trabalhe trabalhe trabalhe"
+        "servicos servicos servicos trabalhe trabalhe trabalhe"
+        "copyright copyright copyright copyright copyright copyright";
+    }
+    #redestext {
+        display: none;
+    }
+    /* Icones das redes sociais */
+    .icones-sociais {
+        width: 10vw;
+        margin-right: 4vw;
+    }
+    .icones-sociais:hover {
+        width: 11vw;
+        margin-right: 4vw;
+        box-shadow: #eeeeee 0px 0px 3px;
+    }
+    #sociais :first-child {
+        margin-left: 2vw;
+    }
+    /* Estilização do copyright */
+    #copyright {
+        font-size: 10px;
+    }
+    /* Estilização das abas de servicos e trabalhe conosco e afins */
+    #servicos {
+        border-left: none;
+    }
+    #servicos ul li, #trabalhe ul li {
+        margin-top: 1vh;
+    }
+}
+
+@media only screen and (max-width:800px) {
+    #logo img {
+        margin: 1vw 0 0 0;
+        width: 22vw;
+    }
+    /* Definição dos grids do rodapé */
+    .rodape {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 0.2fr;
+        grid-template-areas: 
+        "logo logo  sociais sociais sociais sociais"
+        "servicos servicos servicos trabalhe trabalhe trabalhe"
+        "copyright copyright copyright copyright copyright copyright";
+    }
+    #redestext {
+        display: none;
+    }
+    /* Icones das redes sociais */
+    .icones-sociais {
+        width: 7vw;
+        margin-right: 5vw;
+    }
+    .icones-sociais:hover {
+        width: 8vw;
+        margin-right: 6vw;
+        box-shadow: #eeeeee 0px 0px 3px;
+    }
+    #sociais :first-child {
+        margin-left: 5vw;
+    }
+    /* Estilização do copyright */
+    #copyright {
+        font-size: medium;
+    }
+    /* Estilização das abas de servicos e trabalhe conosco e afins */
+    #servicos {
+        border-left: none;
+    }
+    #servicos ul li, #trabalhe ul li {
+        margin-top: 1vh;
+    }
+
+    aside img{
+        height: 200px;
+    }
+}
